@@ -1,0 +1,84 @@
+{
+  "name": "navigator-marketing",
+  "version": "2.1.0",
+  "description": "Navigator Revenue Management Platform - Marketing Website",
+  "private": true,
+  "author": "Navigator Marketing Team",
+  "license": "MIT",
+  "homepage": "https://navigator.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/navigator/marketing-site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/navigator/marketing-site/issues",
+    "email": "support@navigator.com"
+  },
+  "keywords": [
+    "hotel",
+    "revenue-management",
+    "hospitality",
+    "pricing",
+    "automation",
+    "lighthouse-alternative"
+  ],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "web-vitals": "^3.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.{js,jsx}",
+    "lint:fix": "eslint src/**/*.{js,jsx} --fix",
+    "format": "prettier --write src/**/*.{js,jsx,css,md}",
+    "analyze": "npm run build && npx serve -s build",
+    "dev": "npm start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "no-console": "warn",
+      "no-debugger": "warn",
+      "no-unused-vars": "warn",
+      "prefer-const": "error",
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "config": {
+    "marketing_version": "2.1.0",
+    "api_version": "v1",
+    "support_email": "support@navigator.com"
+  }
+}
