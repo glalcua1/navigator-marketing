@@ -5,13 +5,13 @@
   "private": true,
   "author": "Navigator Marketing Team",
   "license": "MIT",
-  "homepage": "https://navigator.com",
+  "homepage": "https://navigator-marketing.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/navigator/marketing-site.git"
+    "url": "https://github.com/glalcua1/navigator-marketing.git"
   },
   "bugs": {
-    "url": "https://github.com/navigator/marketing-site/issues",
+    "url": "https://github.com/glalcua1/navigator-marketing/issues",
     "email": "support@navigator.com"
   },
   "keywords": [
