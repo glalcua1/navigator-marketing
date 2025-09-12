@@ -303,8 +303,18 @@ const LeadGenerationDrawer = ({ isOpen, onClose }) => {
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-bold mb-2">Start Your Free Trial</h2>
-              <p className="text-blue-100">Get started with Navigator in 2 minutes</p>
+              <h2 className="text-2xl font-bold mb-2">
+                {step === 'onboarding' ? (
+                  <span>
+                    🎉 {formData.name ? `${formData.name}, ` : ''}Signup successful
+                  </span>
+                ) : (
+                  'Start Your Free Trial'
+                )}
+              </h2>
+              <p className="text-blue-100">
+                {step === 'onboarding' ? 'Onboarding you to Navigator...' : 'Get started with Navigator in 2 minutes'}
+              </p>
             </div>
             <button
               onClick={onClose}
