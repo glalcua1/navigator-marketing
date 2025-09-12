@@ -39,6 +39,10 @@ const LeadGenerationDrawer = ({ isOpen, onClose }) => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
+  const [step, setStep] = useState('form'); // form | ai | review | onboarding
+  const [recommendedCompetitors, setRecommendedCompetitors] = useState(['Hilton', 'Marriott', 'Hyatt', 'IHG', 'Accor']);
+  const allOTAs = ['Booking.com', 'Expedia', 'Agoda', 'Hotels.com', 'Trip.com', 'Priceline'];
+  const [selectedOTAs, setSelectedOTAs] = useState(['Booking.com', 'Expedia', 'Agoda']);
 
   // Hotel database for auto-population of category and region
   const hotelDatabase = [
@@ -189,34 +193,61 @@ const LeadGenerationDrawer = ({ isOpen, onClose }) => {
       return;
     }
 
+    // Step 1: AI thinking simulation
+    console.log('[LeadGenerationDrawer] Valid form. Entering AI recommendation step');
     setIsSubmitting(true);
-    
+    setStep('ai');
+
     try {
-      console.log('[LeadGenerationDrawer] Form submitted:', formData);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Success - close drawer and show success state
-      alert('Thank you! We\'ll be in touch within 24 hours to set up your free trial.');
-      onClose();
-      
-      // Reset form
-      setFormData({
-        name: '',
-        hotelName: '',
-        category: '',
-        region: '',
-        email: '',
-        phone: ''
-      });
-      
+      // Simulate AI generating recommendations based on category/region
+      await new Promise(resolve => setTimeout(resolve, 1800));
+
+      const region = formData.region;
+      const category = formData.category;
+      const byRegion = {
+        'North America': ['Hilton', 'Marriott', 'Hyatt', 'IHG', 'Wyndham'],
+        'Europe': ['Accor', 'NH Hotels', 'Scandic', 'Radisson', 'Meliá'],
+        'Asia Pacific': ['Shangri-La', 'Mandarin Oriental', 'Taj', 'Hyatt', 'Hilton'],
+      };
+      const byCategory = {
+        'Luxury Resort': ['Four Seasons', 'Ritz-Carlton', 'St. Regis', 'Aman', 'Mandarin Oriental'],
+        'Business Hotel': ['Hilton', 'Marriott', 'IHG', 'Hyatt', 'Radisson'],
+        'Boutique Hotel': ['Kimpton', 'Thompson', 'Moxy', 'CitizenM', 'SLS'],
+      };
+
+      const regionList = byRegion[region] || [];
+      const categoryList = byCategory[category] || [];
+      const combined = [...new Set([...categoryList, ...regionList, ...recommendedCompetitors])].slice(0, 5);
+      setRecommendedCompetitors(combined.length ? combined : recommendedCompetitors);
+      setSelectedOTAs(['Booking.com', 'Expedia', 'Agoda']);
+
+      // Proceed to review/edit step
+      setStep('review');
     } catch (error) {
-      console.error('[LeadGenerationDrawer] Submission error:', error);
+      console.error('[LeadGenerationDrawer] AI step failed:', error);
       alert('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  // Handle OTA selection with max 3 constraint
+  const toggleOTA = (ota) => {
+    setSelectedOTAs(prev => {
+      if (prev.includes(ota)) return prev.filter(o => o !== ota);
+      if (prev.length >= 3) return prev; // limit to 3
+      return [...prev, ota];
+    });
+  };
+
+  // Confirm recommendations and redirect
+  const handleConfirmRecommendations = () => {
+    console.log('[LeadGenerationDrawer] Confirmed competitors:', recommendedCompetitors, 'OTAs:', selectedOTAs);
+    setStep('onboarding');
+    // Simulate onboarding handoff and redirect to app
+    setTimeout(() => {
+      window.location.href = 'https://navigator-263010608613.us-east4.run.app';
+    }, 1500);
   };
 
   // Close drawer on escape key
@@ -242,6 +273,14 @@ const LeadGenerationDrawer = ({ isOpen, onClose }) => {
     return () => {
       document.body.style.overflow = 'unset';
     };
+  }, [isOpen]);
+
+  // Reset flow when drawer opens
+  useEffect(() => {
+    if (isOpen) {
+      setStep('form');
+      setIsSubmitting(false);
+    }
   }, [isOpen]);
 
   return (
@@ -282,6 +321,7 @@ const LeadGenerationDrawer = ({ isOpen, onClose }) => {
         {/* Drawer Content - Scrollable Area */}
         <div className="flex-1 overflow-y-auto">
           <div className="p-6">
+          {step === 'form' && (
           <form onSubmit={handleSubmit} className="space-y-6">
             
             {/* Name Field */}
@@ -514,7 +554,7 @@ const LeadGenerationDrawer = ({ isOpen, onClose }) => {
               {isSubmitting ? (
                 <div className="flex items-center justify-center">
                   <div className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-2"></div>
-                  Setting up your trial...
+                  Thinking with AI...
                 </div>
               ) : (
                 'Start Free Trial Now'
@@ -522,6 +562,72 @@ const LeadGenerationDrawer = ({ isOpen, onClose }) => {
             </button>
 
           </form>
+          )}
+
+          {step === 'ai' && (
+            <div className="py-16 text-center">
+              <div className="mx-auto w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+              <div className="text-slate-700 font-semibold">Analyzing your market and compset...</div>
+              <div className="text-slate-500 text-sm mt-2">Finding competitors and best OTAs for your property</div>
+            </div>
+          )}
+
+          {step === 'review' && (
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-bold text-slate-800">Recommended Competitors</h3>
+                <p className="text-slate-600 text-sm">Edit if needed. We suggest 5 based on your category and region.</p>
+                <div className="mt-3 space-y-2">
+                  {recommendedCompetitors.map((name, idx) => (
+                    <input
+                      key={idx}
+                      type="text"
+                      value={name}
+                      onChange={(e) => {
+                        const copy = [...recommendedCompetitors];
+                        copy[idx] = e.target.value;
+                        setRecommendedCompetitors(copy);
+                      }}
+                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-slate-800">Select 3 OTAs</h3>
+                <p className="text-slate-600 text-sm">Choose up to three distribution partners to monitor first.</p>
+                <div className="mt-3 grid grid-cols-2 gap-2">
+                  {allOTAs.map((ota) => (
+                    <label key={ota} className={`flex items-center gap-2 p-2 rounded-lg border ${selectedOTAs.includes(ota) ? 'border-blue-500 bg-blue-50' : 'border-slate-300'}`}>
+                      <input
+                        type="checkbox"
+                        checked={selectedOTAs.includes(ota)}
+                        onChange={() => toggleOTA(ota)}
+                      />
+                      <span className="text-slate-700">{ota}</span>
+                    </label>
+                  ))}
+                </div>
+                <p className="text-xs text-slate-500 mt-1">Currently selected: {selectedOTAs.join(', ') || 'none'} (max 3)</p>
+              </div>
+
+              <button
+                onClick={handleConfirmRecommendations}
+                className="w-full py-3 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-95"
+              >
+                Confirm & Continue
+              </button>
+            </div>
+          )}
+
+          {step === 'onboarding' && (
+            <div className="py-16 text-center">
+              <div className="mx-auto w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+              <div className="text-slate-700 font-semibold">Onboarding you to Navigator...</div>
+              <div className="text-slate-500 text-sm mt-2">Redirecting you to your dashboard</div>
+            </div>
+          )}
           </div>
         </div>
 

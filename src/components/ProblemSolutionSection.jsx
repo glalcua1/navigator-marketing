@@ -56,146 +56,190 @@ const ProblemSolutionSection = ({ onSectionView }) => {
     >
       <div className="max-w-6xl mx-auto px-6">
         
-        {/* The Problem - Direct and Honest */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${
+        {/* Stats-style intro row (designed like attached, in Navigator theme) */}
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-8">
-            You're losing money every night
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              While you sleep, competitors undercut your rates. While you analyze spreadsheets, 
-              demand surges happen without you. While you manage data, revenue opportunities slip away.
-            </p>
-            <p className="text-2xl font-bold text-red-600">
-              The average hotel loses $2,400 daily to preventable rate violations.
-            </p>
+          <div className="bg-white rounded-3xl p-8 border border-slate-200">
+            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">$2.4K</div>
+            <div className="text-slate-500">Avg daily revenue leakage</div>
+          </div>
+          <div className="bg-white rounded-3xl p-8 border border-slate-200">
+            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">24/7</div>
+            <div className="text-slate-500">Rate and parity violations</div>
+          </div>
+          <div className="bg-white rounded-3xl p-8 border border-slate-200">
+            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">48h</div>
+            <div className="text-slate-500">Early demand surge signals</div>
+          </div>
+          <div className="bg-white rounded-3xl p-8 border border-slate-200">
+            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">1100+</div>
+            <div className="text-slate-500">Data sources monitored</div>
+          </div>
+          <div className="bg-white rounded-3xl p-8 border border-slate-200">
+            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">4 hrs</div>
+            <div className="text-slate-500">Manual work saved daily</div>
           </div>
         </div>
         
-        {/* The Solution - Clear and Powerful */}
-        <div className={`transition-all duration-1000 delay-300 ${
+        
+        {/* Introducing Navigator - Hospitality-specific AI section (replaces previous 3-ways block) */}
+        <div className={`reveal ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-12 border border-blue-200">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
-                Navigator solves this in three ways
+          {/* Full-width breakout container */}
+          <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+            <div className="py-12 md:py-16 px-6 md:px-12 lg:px-24 bg-slate-50 border border-slate-200">
+              {/* Header */}
+              <div className="text-center max-w-4xl mx-auto mb-12">
+              <div className="text-slate-500 font-semibold tracking-wide mb-3">Introducing Navigator</div>
+              <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                Powering Decisions with <span className="text-blue-600">AI</span> that Gets Hospitality
               </h3>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-12">
-              {/* Solution 1 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
-                  1
-                </div>
-                <h4 className="text-xl font-bold text-slate-800 mb-4">
-                  24/7 Monitoring
-                </h4>
-                <p className="text-slate-600 leading-relaxed">
-                  Automatically detects rate violations and market changes 
-                  while you sleep. No more 3 AM panic checks.
-                </p>
+              <p className="text-lg text-slate-700 mb-2">Navigator doesn’t just track data—it understands it.</p>
+              <p className="text-lg text-slate-600">Built with hospitality-specific AI, Navigator helps commercial teams make sharper, faster pricing decisions by identifying patterns no human could spot in time.</p>
               </div>
-              
-              {/* Solution 2 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
-                  2
-                </div>
-                <h4 className="text-xl font-bold text-slate-800 mb-4">
-                  Predictive Intelligence
-                </h4>
+
+              {/* Feature Cards */}
+              <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+                <div className="bg-white rounded-2xl p-8 border border-slate-200 transition-all duration-300">
+                <h4 className="text-xl font-bold text-slate-800 mb-3">Rate Tracking</h4>
                 <p className="text-slate-600 leading-relaxed">
-                  Forecasts demand surges 48 hours ahead. Position your rates 
-                  before competitors even know what's coming.
+                  Detects rate discrepancies and parity violations automatically—even the subtle ones—across hundreds of OTAs and POS combinations.
                 </p>
-              </div>
-              
-              {/* Solution 3 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-indigo-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
-                  3
                 </div>
-                <h4 className="text-xl font-bold text-slate-800 mb-4">
-                  Automated Optimization
-                </h4>
+                <div className="bg-white rounded-2xl p-8 border border-slate-200 transition-all duration-300">
+                <h4 className="text-xl font-bold text-slate-800 mb-3">Predictive Demand Signals</h4>
                 <p className="text-slate-600 leading-relaxed">
-                  Makes pricing decisions for you based on real-time data. 
-                  Spend time on strategy, not spreadsheets.
+                  Uses AI to surface spikes and dips in demand before they happen, so you can adjust rates proactively.
                 </p>
+                </div>
+                <div className="bg-white rounded-2xl p-8 border border-slate-200 transition-all duration-300">
+                <h4 className="text-xl font-bold text-slate-800 mb-3">Smarter Filtering, Less Noise</h4>
+                <p className="text-slate-600 leading-relaxed">
+                  Cuts through the clutter by flagging only the violations and shifts that actually matter to your market segment.
+                </p>
+                </div>
+                <div className="bg-white rounded-2xl p-8 border border-slate-200 transition-all duration-300">
+                <h4 className="text-xl font-bold text-slate-800 mb-3">AI-Powered Recommendations</h4>
+                <p className="text-slate-600 leading-relaxed">
+                  From price positioning to parity resolution paths, Navigator guides your next move with data-backed intelligence.
+                </p>
+                </div>
               </div>
-            </div>
+              </div>
           </div>
         </div>
         
-        {/* The Proof - Simple and Credible */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-600 ${
+        {/* How Navigator Works - Core Flow */}
+        <div className={`mt-16 reveal ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-800 mb-6">
-              The result? Revenue managers sleep better and earn more.
-            </h3>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">23%</div>
-                <p className="text-slate-600">Average ADR increase</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">4 hrs</div>
-                <p className="text-slate-600">Daily time saved</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-600 mb-2">500+</div>
-                <p className="text-slate-600">Hotels using Navigator</p>
-              </div>
+          <div className="max-w-6xl mx-auto">
+            {/* Section Header */}
+            <div className="mb-10 lg:hidden">
+              <div className="text-slate-600 font-semibold tracking-wide uppercase mb-1">How navigator works:</div>
+              <h3 className="text-3xl md:text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                From Market Signals to Better Pricing Decisions
+              </h3>
+              <p className="text-slate-600 mt-2 max-w-4xl">
+                To solve this, Navigator does the heavy lifting across four layers:
+              </p>
             </div>
-            
-            {/* Enhanced Testimonial Card - Compact Design */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border-2 border-blue-200 shadow-lg max-w-4xl mx-auto">
-              <div className="flex items-center gap-6">
-                {/* Large Professional Image */}
-                <div className="flex-shrink-0">
-                  <img 
-                    src="/medium-shot-man-working-as-real-estate-agent.jpg" 
-                    alt="Michael Rodriguez, Revenue Manager"
-                    className="w-24 h-24 rounded-2xl object-cover border-3 border-blue-400 shadow-lg"
-                    onError={(e) => {
-                      console.log('[ProblemSolutionSection] Testimonial image failed to load');
-                      e.target.style.display = 'none';
-                    }}
-                  />
+
+            {/* Two-column: Video left, Steps right */}
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              {/* Sticky media + header on desktop */}
+              <div className="lg:sticky lg:top-24 self-start">
+                <div className="hidden lg:block mb-6">
+                  <div className="text-slate-600 font-semibold tracking-wide uppercase mb-1">How navigator works:</div>
+                  <h3 className="text-3xl md:text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">From Market Signals to Better Pricing Decisions</h3>
+                  <p className="text-slate-600 mt-2">To solve this, Navigator does the heavy lifting across four layers:</p>
                 </div>
-                
-                {/* Content Side - Left Aligned */}
-                <div className="flex-1">
-                  <blockquote className="text-lg italic text-slate-800 mb-4 font-medium leading-relaxed text-left">
-                    "Navigator transformed our revenue management completely. What used to take hours of manual analysis now happens automatically. Our ADR increased 23% in three months, and I can finally focus on strategic planning instead of data crunching."
-                  </blockquote>
-                  
-                  <div className="flex items-start justify-between">
-                    <div className="text-left">
-                      <cite className="text-slate-700 font-semibold text-lg block">
-                        Michael Rodriguez
-                      </cite>
-                      <div className="text-blue-600 font-medium text-sm">Revenue Manager, Dubai Luxury Hotels</div>
-                    </div>
-                    
-                    {/* Compact rating */}
-                    <div className="flex items-center text-yellow-500 mt-1">
-                      ★★★★★
-                      <span className="ml-2 text-slate-600 text-xs">5.0</span>
+                <div className="relative rounded-3xl overflow-hidden bg-slate-900/5 border border-slate-200">
+                  <img src="/11706.jpg" alt="Navigator market signals" className="w-full h-[420px] md:h-[520px] object-cover" />
+                  <div className="absolute inset-x-0 bottom-0 p-4">
+                    <div className="backdrop-blur-md bg-white/20 border border-white/30 text-white rounded-2xl px-4 py-3 text-sm md:text-base flex items-start">
+                      <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                      <span>
+                        Navigator is built to help hotel commercial teams answer one critical question: “Are we priced right — right now?”
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* Steps list */}
+              <ol className="grid grid-cols-1 gap-6">
+              {/* Step 1 */}
+              <li className="group relative rounded-2xl bg-white border border-slate-200 p-6 transition-all duration-300">
+                <div className="absolute -top-3 -left-3 h-10 w-10 rounded-xl bg-blue-600 text-white font-bold flex items-center justify-center">1</div>
+                <h4 className="text-xl font-bold text-slate-800 mb-2">Multi-Source Market Scanning</h4>
+                <p className="text-slate-600 mb-3">Navigator continuously scans and collects pricing and demand signals from over 1,100 data sources, including:</p>
+                <ul className="list-disc pl-5 space-y-1 text-slate-600">
+                  <li>800+ OTAs, brand.com sites, metasearch platforms</li>
+                  <li>Global demand indicators: events, airline data, car rentals, cruises, and more</li>
+                  <li>Member-only rates, mobile rates, and multi-POS visibility</li>
+                </ul>
+                <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1 text-sm font-medium">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
+                  This ensures you always see what guests see—wherever they’re booking.
+                </div>
+              </li>
+
+              {/* Step 2 */}
+              <li className="group relative rounded-2xl bg-white border border-slate-200 p-6 transition-all duration-300">
+                <div className="absolute -top-3 -left-3 h-10 w-10 rounded-xl bg-purple-600 text-white font-bold flex items-center justify-center">2</div>
+                <h4 className="text-xl font-bold text-slate-800 mb-2">Data Cleaning, Matching & Validation</h4>
+                <p className="text-slate-600 mb-3">Raw data is useless without refinement. Navigator uses proprietary algorithms to:</p>
+                <ul className="list-disc pl-5 space-y-1 text-slate-600">
+                  <li>Match room types and rate plans apple-to-apple</li>
+                  <li>Remove outliers and anomalies</li>
+                  <li>Ensure real-time freshness — no cached or outdated pricing</li>
+                </ul>
+                <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1 text-sm font-medium">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
+                  Clean, accurate, immediately actionable rate intelligence.
+                </div>
+              </li>
+
+              {/* Step 3 */}
+              <li className="group relative rounded-2xl bg-white border border-slate-200 p-6 transition-all duration-300">
+                <div className="absolute -top-3 -left-3 h-10 w-10 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center">3</div>
+                <h4 className="text-xl font-bold text-slate-800 mb-2">Unified Commercial Intelligence</h4>
+                <p className="text-slate-600 mb-3">Navigator doesn’t just give you a rate table — it synthesizes:</p>
+                <ul className="list-disc pl-5 space-y-1 text-slate-600">
+                  <li>Competitor pricing movements</li>
+                  <li>Demand surges in feeder markets</li>
+                  <li>Parity violations across distribution</li>
+                  <li>Impact areas that need immediate action</li>
+                </ul>
+                <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1 text-sm font-medium">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
+                  One dashboard. All the signals you need. No spreadsheets.
+                </div>
+              </li>
+
+              {/* Step 4 */}
+              <li className="group relative rounded-2xl bg-white border border-slate-200 p-6 transition-all duration-300">
+                <div className="absolute -top-3 -left-3 h-10 w-10 rounded-xl bg-pink-600 text-white font-bold flex items-center justify-center">4</div>
+                <h4 className="text-xl font-bold text-slate-800 mb-2">Decision Support via AI</h4>
+                <p className="text-slate-600 mb-3">AI models surface the most urgent and revenue-impacting insights:</p>
+                <ul className="list-disc pl-5 space-y-1 text-slate-600">
+                  <li>Detect potential underpricing or overpricing</li>
+                  <li>Flag parity leak sources in real time</li>
+                  <li>Recommend optimal rate changes to stay ahead</li>
+                </ul>
+                <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1 text-sm font-medium">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
+                  Not just data—your 24×7 virtual revenue analyst.
+                </div>
+              </li>
+              </ol>
             </div>
           </div>
         </div>
+
         
       </div>
     </section>

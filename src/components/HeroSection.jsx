@@ -106,14 +106,11 @@ const HeroSection = ({ onSectionView }) => {
               </h1>
             </div>
             
-            {/* Clean Subheadline */}
+            {/* Clean Subheadline (moved to right card as requested) */}
             <div className={`transition-all duration-1000 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
-              <p className="text-xl lg:text-2xl mb-8 text-slate-200 leading-relaxed max-w-2xl">
-                Stop losing $2,400/day to rate violations. Navigator monitors, predicts, 
-                and optimizes your revenue 24/7 while you focus on your guests.
-              </p>
+              {/* Intentionally left empty after moving copy to the right card */}
             </div>
             
             {/* Single Primary CTA */}
@@ -156,64 +153,43 @@ const HeroSection = ({ onSectionView }) => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-8">Why hotels choose Navigator</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center mr-4">
-                    <span className="text-white font-bold text-lg">23%</span>
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">Average ADR increase</div>
-                    <div className="text-slate-300 text-sm">Revenue improvement in 90 days</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-purple-500 rounded-2xl flex items-center justify-center mr-4">
-                    <span className="text-white font-bold text-lg">2w</span>
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">Implementation time</div>
-                    <div className="text-slate-300 text-sm">vs 6 months with Lighthouse</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-indigo-500 rounded-2xl flex items-center justify-center mr-4">
-                    <span className="text-white font-bold text-lg">24/7</span>
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">Automated monitoring</div>
-                    <div className="text-slate-300 text-sm">Never miss a revenue opportunity</div>
-                  </div>
-                </div>
+              <h3 className="text-2xl font-bold text-white mb-3">Why hotels choose Navigator</h3>
+
+              {/* Removed duplicate highlighted statement per request */}
+
+              {/* Value proposition subtitle and visual bullet list */}
+              <p className="text-slate-200 italic">
+                The Most Reliable Rate Intelligence Platform
+              </p>
+
+              <ul className="mt-4 space-y-3">
+                <li className="flex items-start">
+                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center rounded-lg bg-green-500/30 border border-green-400/40 text-green-200 text-sm font-bold">✓</span>
+                  <span className="text-white">Most accurate rate shopping across 1100+ sources</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center rounded-lg bg-green-500/30 border border-green-400/40 text-green-200 text-sm font-bold">✓</span>
+                  <span className="text-white">Real-time parity breach detection & resolution</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center rounded-lg bg-green-500/30 border border-green-400/40 text-green-200 text-sm font-bold">✓</span>
+                  <span className="text-white">Early signals on demand shifts & market trends</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center rounded-lg bg-green-500/30 border border-green-400/40 text-green-200 text-sm font-bold">✓</span>
+                  <span className="text-white">Flexible APIs for smooth integration</span>
+                </li>
+              </ul>
+
+              {/* Pill badge with glass effect highlighting the key positioning statement */}
+              <div className="mt-6 flex justify-center">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm md:text-base font-semibold shadow-lg shadow-black/20">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400"></span>
+                  Beyond Light, uncover every competitor insight for maximum revenue gain.
+                </span>
               </div>
+
               
-              <div className="mt-8 p-4 bg-green-500/20 rounded-2xl border border-green-400/30">
-                <div className="flex items-start space-x-4">
-                  <img 
-                    src="/portrait-woman-playing-poker-casino.jpg" 
-                    alt="Sarah Chen, Revenue Manager"
-                    className="w-12 h-12 rounded-full object-cover border-2 border-green-400/50"
-                    onError={(e) => {
-                      console.log('[HeroSection] Sarah Chen portrait failed to load');
-                      e.target.style.display = 'none';
-                    }}
-                  />
-                  <div className="flex-1">
-                    <p className="text-green-100 text-sm font-medium leading-relaxed">
-                      "Navigator gave me my life back. I sleep through the night knowing my revenue is protected."
-                    </p>
-                    <div className="flex items-center mt-2">
-                      <div>
-                        <div className="text-green-200 text-xs font-semibold">Sarah Chen</div>
-                        <div className="text-green-300 text-xs">Revenue Manager</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           

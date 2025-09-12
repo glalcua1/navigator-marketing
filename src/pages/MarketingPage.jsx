@@ -18,6 +18,8 @@
 import React, { useState, useEffect } from 'react';
 import HeroSection from '../components/HeroSection';
 import ProblemSolutionSection from '../components/ProblemSolutionSection';
+import EcosystemIntegration from '../components/EcosystemIntegration';
+import DifferentiatorMatrix from '../components/DifferentiatorMatrix';
 import SimplifiedComparison from '../components/SimplifiedComparison';
 import SimplifiedCTA from '../components/SimplifiedCTA';
 import Footer from '../components/Footer';
@@ -84,6 +86,10 @@ const MarketingPage = () => {
       
       {/* Problem-Solution - The Core Message */}
       <ProblemSolutionSection onSectionView={() => handleSectionView('problem-solution')} />
+
+      {/* Ecosystem + Differentiators (above SimplifiedComparison) */}
+      <EcosystemIntegration />
+      <DifferentiatorMatrix />
       
       {/* Simplified Comparison - Clear Differentiation */}
       <SimplifiedComparison onSectionView={() => handleSectionView('comparison')} />

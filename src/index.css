@@ -399,3 +399,7 @@ body {
     animation-duration: 45s; /* Faster on mobile */
   }
 }
+
+/* Simple reveal helper for scroll-based animations */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 800ms ease, transform 800ms ease; }
+.reveal.revealed { opacity: 1; transform: translateY(0); }
