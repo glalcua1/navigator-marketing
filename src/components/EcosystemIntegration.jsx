@@ -9,35 +9,50 @@ import React from 'react';
 
 const EcosystemIntegration = () => {
   return (
-    <section className="relative py-20 bg-slate-50">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Built to Plug</span>{' '}into Your Ecosystem
-          </h2>
-          <p className="text-lg text-slate-600 mt-4 max-w-4xl mx-auto">
-            Whether you need a full UI experience or raw rate feeds into your BI stack, Navigator adapts to your workflows.
-          </p>
-        </div>
-
-        {/* Card row to avoid large blank space on some viewports */}
-        <div className="relative mx-auto max-w-6xl">
-          <div className="grid sm:grid-cols-3 gap-6">
-            <div className="rounded-2xl bg-white border border-slate-200 p-8 text-center">
-              <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 grid place-items-center text-white text-2xl font-bold">UI</div>
-              <div className="mt-4 text-slate-700 font-semibold">Navigator UI</div>
-            </div>
-            <div className="rounded-2xl bg-white border border-slate-200 p-8 text-center">
-              <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 grid place-items-center text-white text-2xl font-bold">RMS</div>
-              <div className="mt-4 text-slate-700 font-semibold">API for RMSs</div>
-            </div>
-            <div className="rounded-2xl bg-white border border-slate-200 p-8 text-center">
-              <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 grid place-items-center text-white text-2xl font-bold">BI</div>
-              <div className="mt-4 text-slate-700 font-semibold">API for BI</div>
+    <section
+      className="relative py-20 min-h-[680px] md:min-h-[760px]"
+      style={{
+        backgroundImage: "url('/209165475_12afdcf0-ee57-4cd4-bc17-67c5c457e3ac.jpg')",
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
+      }}
+    >
+      {/* overlay for legibility on left */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="min-h-[680px] md:min-h-[760px] flex items-center">
+          <div className="grid md:grid-cols-2 gap-10 items-center w-full">
+          {/* Left text aligned with tree */}
+          <div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+              Built to Plug <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-300">into Your Ecosystem</span>
+            </h2>
+            <p className="mt-4 text-blue-100 text-lg max-w-xl">
+              Whether you need a full UI experience or raw rate feeds into your BI stack, Navigator adapts to your workflows.
+            </p>
+          </div>
+          {/* Right glass card */}
+          <div className="md:justify-self-end w-full max-w-xl">
+            <div className="rounded-3xl border border-white/30 bg-white/15 backdrop-blur-xl p-8">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-blue-300"></span>
+                  <span className="text-white font-semibold">Navigator UI</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-indigo-300"></span>
+                  <span className="text-white font-semibold">API for all leading RMSs</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-300"></span>
+                  <span className="text-white font-semibold">API for BI System</span>
+                </li>
+              </ul>
             </div>
           </div>
+          </div>
         </div>
-
       </div>
     </section>
   );

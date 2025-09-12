@@ -102,7 +102,7 @@ const ProblemSolutionSection = ({ onSectionView }) => {
               <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
                   {/* Illustration: Rate Tracking (image) */}
-                  <div className="relative z-10 w-full h-40 sm:h-44 md:h-48 lg:h-56 overflow-hidden">
+                  <div className="relative z-10 w-full h-32 sm:h-36 md:h-40 lg:h-44 overflow-hidden">
                     <img src="/19456.jpg" alt="Rate tracking visualization" className="w-full h-full object-cover" />
                   </div>
                   <div className="relative z-10 p-6">
@@ -116,7 +116,7 @@ const ProblemSolutionSection = ({ onSectionView }) => {
                 </div>
                 <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
                   {/* Illustration: Predictive Demand Signals (svg image) */}
-                  <div className="relative z-10 w-full h-40 sm:h-44 md:h-48 lg:h-56 overflow-hidden">
+                  <div className="relative z-10 w-full h-32 sm:h-36 md:h-40 lg:h-44 overflow-hidden">
                     <img src="/420946224_fb6c1e98-bc72-4bb3-8f68-384948186b85.svg" alt="Predictive Demand Signals" className="w-full h-full object-cover" />
                   </div>
                   <div className="relative z-10 p-6">
@@ -129,7 +129,7 @@ const ProblemSolutionSection = ({ onSectionView }) => {
                 </div>
                 <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
                   {/* Illustration: Smarter Filtering (image) */}
-                  <div className="relative z-10 w-full h-40 sm:h-44 md:h-48 lg:h-56 overflow-hidden">
+                  <div className="relative z-10 w-full h-32 sm:h-36 md:h-40 lg:h-44 overflow-hidden">
                     <img src="/1570.jpg" alt="Smarter filtering" className="w-full h-full object-cover" />
                   </div>
                   <div className="relative z-10 p-6">
@@ -142,7 +142,7 @@ const ProblemSolutionSection = ({ onSectionView }) => {
                 </div>
                 <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
                   {/* Illustration: AI-Powered Recommendations (image) */}
-                  <div className="relative z-10 w-full h-40 sm:h-44 md:h-48 lg:h-56 overflow-hidden">
+                  <div className="relative z-10 w-full h-32 sm:h-36 md:h-40 lg:h-44 overflow-hidden">
                     <img src="/6841.jpg" alt="AI-powered recommendations" className="w-full h-full object-cover" />
                   </div>
                   <div className="relative z-10 p-6">
