@@ -20,22 +20,20 @@ const EcosystemIntegration = () => {
           </p>
         </div>
 
-        {/* Center graphic placeholder in our theme */}
-        <div className="relative mx-auto max-w-4xl">
-          <div className="aspect-[4/3] rounded-3xl bg-white border border-slate-200 shadow-2xl grid place-items-center">
-            <div className="grid grid-cols-3 gap-8 px-10">
-              <div className="text-center">
-                <div className="mx-auto w-28 h-28 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 shadow-lg grid place-items-center text-white text-3xl font-bold">UI</div>
-                <div className="mt-4 text-slate-700 font-semibold">Navigator UI</div>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto w-28 h-28 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 shadow-lg grid place-items-center text-white text-3xl font-bold">RMS</div>
-                <div className="mt-4 text-slate-700 font-semibold">API for RMSs</div>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto w-28 h-28 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 shadow-lg grid place-items-center text-white text-3xl font-bold">BI</div>
-                <div className="mt-4 text-slate-700 font-semibold">API for BI</div>
-              </div>
+        {/* Card row to avoid large blank space on some viewports */}
+        <div className="relative mx-auto max-w-6xl">
+          <div className="grid sm:grid-cols-3 gap-6">
+            <div className="rounded-2xl bg-white border border-slate-200 p-8 text-center">
+              <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 grid place-items-center text-white text-2xl font-bold">UI</div>
+              <div className="mt-4 text-slate-700 font-semibold">Navigator UI</div>
+            </div>
+            <div className="rounded-2xl bg-white border border-slate-200 p-8 text-center">
+              <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 grid place-items-center text-white text-2xl font-bold">RMS</div>
+              <div className="mt-4 text-slate-700 font-semibold">API for RMSs</div>
+            </div>
+            <div className="rounded-2xl bg-white border border-slate-200 p-8 text-center">
+              <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 grid place-items-center text-white text-2xl font-bold">BI</div>
+              <div className="mt-4 text-slate-700 font-semibold">API for BI</div>
             </div>
           </div>
         </div>

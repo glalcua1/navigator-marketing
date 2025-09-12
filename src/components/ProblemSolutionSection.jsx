@@ -84,9 +84,7 @@ const ProblemSolutionSection = ({ onSectionView }) => {
         
         
         {/* Introducing Navigator - Hospitality-specific AI section (replaces previous 3-ways block) */}
-        <div className={`reveal ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div className={`reveal ${isVisible ? 'revealed' : ''}`}>
           {/* Full-width breakout container */}
           <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
             <div className="py-12 md:py-16 px-6 md:px-12 lg:px-24 bg-slate-50 border border-slate-200">
@@ -132,9 +130,7 @@ const ProblemSolutionSection = ({ onSectionView }) => {
         </div>
         
         {/* How Navigator Works - Core Flow */}
-        <div className={`mt-16 reveal ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div className={`mt-16 reveal ${isVisible ? 'revealed' : ''}`}>
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="mb-10 lg:hidden">
