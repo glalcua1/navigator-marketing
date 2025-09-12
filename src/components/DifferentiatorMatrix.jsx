@@ -27,7 +27,7 @@ const DifferentiatorMatrix = () => {
           <p className="mt-3 text-slate-600">A clear decision table—so you can see the operational reality, not marketing gloss.</p>
         </div>
 
-        <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-xl">
+        <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white">
           {/* Header */}
           <div className="grid grid-cols-12">
             <div className="col-span-4 px-6 py-5 font-semibold text-slate-700 bg-slate-50">Comparison</div>
@@ -38,17 +38,17 @@ const DifferentiatorMatrix = () => {
           {/* Body */}
           <div className="divide-y divide-slate-200">
             {rows.map((r, idx) => (
-              <div key={r.label} className="grid grid-cols-12">
+              <div key={r.label} className="grid grid-cols-12 transition-colors duration-200 hover:bg-slate-50">
                 {/* Feature label */}
-                <div className={`col-span-4 px-6 py-5 font-medium ${idx % 2 ? 'bg-slate-50/60' : 'bg-white'} text-slate-700`}>{r.label}</div>
+                <div className={`col-span-4 px-6 py-5 font-medium ${idx % 2 ? 'bg-slate-50/60' : 'bg-white'} hover:bg-transparent text-slate-700`}>{r.label}</div>
                 {/* Navigator cell emphasized */}
-                <div className={`col-span-4 px-6 py-5 ${idx % 2 ? 'bg-blue-50' : 'bg-blue-50/70'} text-slate-900`}> 
-                  <span className="inline-block rounded-md bg-white/60 border border-blue-200 px-2 py-1 text-sm font-semibold text-blue-900">
+                <div className={`col-span-4 px-6 py-5 ${idx % 2 ? 'bg-blue-50' : 'bg-blue-50/70'} hover:bg-blue-100/70 text-slate-900`}> 
+                  <span className="inline-block rounded-md bg-white/70 border border-blue-200 px-2 py-1 text-sm font-semibold text-blue-900">
                     {r.navigator}
                   </span>
                 </div>
                 {/* Other solutions de-emphasized */}
-                <div className={`col-span-4 px-6 py-5 ${idx % 2 ? 'bg-slate-50' : 'bg-slate-100'} text-slate-600`}>{r.other}</div>
+                <div className={`col-span-4 px-6 py-5 ${idx % 2 ? 'bg-slate-50' : 'bg-slate-100'} hover:bg-slate-200/60 text-slate-700`}>{r.other}</div>
               </div>
             ))}
           </div>

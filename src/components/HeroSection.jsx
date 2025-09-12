@@ -127,14 +127,16 @@ const HeroSection = ({ onSectionView }) => {
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <button 
                   onClick={handleStartTrial}
-                  className="group px-10 py-5 bg-white text-slate-900 rounded-2xl font-bold text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  className="group relative rounded-2xl p-[2px] bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 hover:opacity-95"
                 >
-                  <span>Start Free Trial</span>
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  <span className="block px-10 py-5 rounded-[14px] text-white font-bold text-xl bg-transparent">
+                    <span>Start Free Trial</span>
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  </span>
                 </button>
                 
-                <button className="px-8 py-5 border-2 border-white/30 text-white rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-white/10">
-                  Watch Demo
+                <button className="px-8 py-5 border-2 border-white/80 text-white rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-white/10">
+                  Book a Demo
                 </button>
               </div>
               
@@ -159,8 +161,12 @@ const HeroSection = ({ onSectionView }) => {
           <div className={`transition-all duration-1000 delay-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-3">Why hotels choose Navigator</h3>
+            <div className="relative rounded-3xl p-[1px] bg-gradient-to-r from-blue-300/40 to-purple-300/40">
+              <div className="bg-black/50 backdrop-blur-xl rounded-3xl p-8 border border-white/20">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-2xl font-bold text-white">Why hotels choose Navigator</h3>
+                  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-white/15 border border-white/20 text-white/90">Navigator USP</span>
+                </div>
 
               {/* Removed duplicate highlighted statement per request */}
 
@@ -196,7 +202,7 @@ const HeroSection = ({ onSectionView }) => {
                 </span>
               </div>
 
-              
+              </div>
             </div>
           </div>
           

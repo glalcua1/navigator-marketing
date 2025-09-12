@@ -85,8 +85,8 @@ const ProblemSolutionSection = ({ onSectionView }) => {
         
         {/* Introducing Navigator - Hospitality-specific AI section (replaces previous 3-ways block) */}
         <div className={`reveal ${isVisible ? 'revealed' : ''}`}>
-          {/* Full-width breakout container */}
-          <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+          {/* Full-width container without causing horizontal scroll */}
+          <div className="relative -mx-6 md:-mx-12 lg:-mx-24">
             <div className="py-12 md:py-16 px-6 md:px-12 lg:px-24 bg-slate-50 border border-slate-200">
               {/* Header */}
               <div className="text-center max-w-4xl mx-auto mb-12">
@@ -99,85 +99,59 @@ const ProblemSolutionSection = ({ onSectionView }) => {
               </div>
 
               {/* Feature Cards */}
-              <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-                <div className="bg-white rounded-2xl p-8 border border-slate-200 transition-all duration-300">
-                  {/* Illustration: Rate Tracking (badges + grid) */}
-                  <div className="mb-4">
-                    <svg viewBox="0 0 180 80" className="w-full h-16" aria-hidden="true">
-                      <defs>
-                        <linearGradient id="gradBlue" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#2563eb"/>
-                          <stop offset="100%" stopColor="#6366f1"/>
-                        </linearGradient>
-                        <linearGradient id="gradRed" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#ef4444"/>
-                          <stop offset="100%" stopColor="#fb7185"/>
-                        </linearGradient>
-                      </defs>
-                      <rect x="6" y="6" rx="10" ry="10" width="46" height="30" fill="url(#gradBlue)" opacity="0.95"/>
-                      <rect x="6" y="44" rx="10" ry="10" width="46" height="30" fill="url(#gradRed)" opacity="0.95"/>
-                      {/* mini grid */}
-                      {Array.from({length:6}).map((_,r)=>
-                        Array.from({length:9}).map((_,c)=>{
-                          const x=70+c*12; const y=10+r*12; const red=(r%2===1 && c%3===1);
-                          return <rect key={`g-${r}-${c}`} x={x} y={y} width="8" height="8" rx="2" fill={red? '#f87171' : '#93c5fd'} opacity={c%4===0?1:0.75}/>;
-                        })
-                      )}
-                    </svg>
+              <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
+                  {/* Illustration: Rate Tracking (image) */}
+                  <div className="relative z-10 w-full h-40 sm:h-44 md:h-48 lg:h-56 overflow-hidden">
+                    <img src="/19456.jpg" alt="Rate tracking visualization" className="w-full h-full object-cover" />
                   </div>
+                  <div className="relative z-10 p-6">
                   <h4 className="text-xl font-bold text-slate-800 mb-3">Rate Tracking</h4>
                   <p className="text-slate-600 leading-relaxed">
                     Detects rate discrepancies and parity violations automatically—even the subtle ones—across hundreds of OTAs and POS combinations.
                   </p>
-                </div>
-                <div className="bg-white rounded-2xl p-8 border border-slate-200 transition-all duration-300">
-                  {/* Illustration: Predictive Demand Signals (wave) */}
-                  <div className="mb-4">
-                    <svg viewBox="0 0 180 80" className="w-full h-16" aria-hidden="true">
-                      <rect x="0" y="0" width="180" height="80" rx="10" fill="#eef2ff" />
-                      <polyline points="0,60 20,55 40,50 60,40 80,30 100,35 120,25 140,38 160,22 180,28" fill="none" stroke="#7c3aed" strokeWidth="3" />
-                      <circle cx="120" cy="25" r="4" fill="#7c3aed"/>
-                      <circle cx="160" cy="22" r="4" fill="#7c3aed"/>
-                    </svg>
                   </div>
+                  {/* Hover gradient overlay */}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/40 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
+                  {/* Illustration: Predictive Demand Signals (svg image) */}
+                  <div className="relative z-10 w-full h-40 sm:h-44 md:h-48 lg:h-56 overflow-hidden">
+                    <img src="/420946224_fb6c1e98-bc72-4bb3-8f68-384948186b85.svg" alt="Predictive Demand Signals" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="relative z-10 p-6">
                   <h4 className="text-xl font-bold text-slate-800 mb-3">Predictive Demand Signals</h4>
                   <p className="text-slate-600 leading-relaxed">
                     Uses AI to surface spikes and dips in demand before they happen, so you can adjust rates proactively.
                   </p>
-                </div>
-                <div className="bg-white rounded-2xl p-8 border border-slate-200 transition-all duration-300">
-                  {/* Illustration: Smarter Filtering (funnel) */}
-                  <div className="mb-4">
-                    <svg viewBox="0 0 180 80" className="w-full h-16" aria-hidden="true">
-                      <rect x="0" y="0" width="180" height="80" rx="10" fill="#f5f3ff" />
-                      <rect x="20" y="14" width="140" height="12" rx="6" fill="#a78bfa"/>
-                      <rect x="40" y="30" width="100" height="10" rx="5" fill="#8b5cf6"/>
-                      <polygon points="70,44 110,44 95,64 85,64" fill="#7c3aed"/>
-                    </svg>
                   </div>
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/40 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
+                  {/* Illustration: Smarter Filtering (image) */}
+                  <div className="relative z-10 w-full h-40 sm:h-44 md:h-48 lg:h-56 overflow-hidden">
+                    <img src="/1570.jpg" alt="Smarter filtering" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="relative z-10 p-6">
                   <h4 className="text-xl font-bold text-slate-800 mb-3">Smarter Filtering, Less Noise</h4>
                   <p className="text-slate-600 leading-relaxed">
                     Cuts through the clutter by flagging only the violations and shifts that actually matter to your market segment.
                   </p>
-                </div>
-                <div className="bg-white rounded-2xl p-8 border border-slate-200 transition-all duration-300">
-                  {/* Illustration: AI-Powered Recommendations (spark + arrow) */}
-                  <div className="mb-4">
-                    <svg viewBox="0 0 180 80" className="w-full h-16" aria-hidden="true">
-                      <rect x="0" y="0" width="180" height="80" rx="10" fill="#eff6ff" />
-                      <path d="M20 60 L80 30 L100 40 L140 20" stroke="#2563eb" strokeWidth="3" fill="none"/>
-                      <polygon points="140,20 132,22 136,28" fill="#2563eb"/>
-                      <g fill="#fbbf24">
-                        <circle cx="110" cy="22" r="3"/>
-                        <circle cx="118" cy="18" r="2"/>
-                        <circle cx="122" cy="26" r="2"/>
-                      </g>
-                    </svg>
                   </div>
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/40 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
+                  {/* Illustration: AI-Powered Recommendations (image) */}
+                  <div className="relative z-10 w-full h-40 sm:h-44 md:h-48 lg:h-56 overflow-hidden">
+                    <img src="/6841.jpg" alt="AI-powered recommendations" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="relative z-10 p-6">
                   <h4 className="text-xl font-bold text-slate-800 mb-3">AI-Powered Recommendations</h4>
                   <p className="text-slate-600 leading-relaxed">
                     From price positioning to parity resolution paths, Navigator guides your next move with data-backed intelligence.
                   </p>
+                  </div>
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/40 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
               </div>
