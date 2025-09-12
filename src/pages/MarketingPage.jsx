@@ -23,6 +23,7 @@ import DifferentiatorMatrix from '../components/DifferentiatorMatrix';
 import SimplifiedComparison from '../components/SimplifiedComparison';
 import SimplifiedCTA from '../components/SimplifiedCTA';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 /**
  * Main Marketing Page Component
@@ -74,6 +75,7 @@ const MarketingPage = () => {
   
   return (
     <div className="min-h-screen bg-white">
+      <Header />
       {/* Debug info in development */}
       {process.env.NODE_ENV === 'development' && (
         <div className="fixed top-0 right-0 bg-black text-white p-2 text-xs z-50 rounded-bl">
@@ -82,20 +84,30 @@ const MarketingPage = () => {
       )}
       
       {/* Hero Section - The Hook */}
-      <HeroSection onSectionView={() => handleSectionView('hero')} />
+      <div id="hero">
+        <HeroSection onSectionView={() => handleSectionView('hero')} />
+      </div>
       
       {/* Problem-Solution - The Core Message */}
-      <ProblemSolutionSection onSectionView={() => handleSectionView('problem-solution')} />
+      <div id="how">
+        <ProblemSolutionSection onSectionView={() => handleSectionView('problem-solution')} />
+      </div>
 
       {/* Ecosystem + Differentiators (above SimplifiedComparison) */}
-      <EcosystemIntegration />
-      <DifferentiatorMatrix />
+      <div id="ecosystem">
+        <EcosystemIntegration />
+      </div>
+      <div id="compare">
+        <DifferentiatorMatrix />
+      </div>
       
       {/* Simplified Comparison - Clear Differentiation */}
       <SimplifiedComparison onSectionView={() => handleSectionView('comparison')} />
       
       {/* Call to Action - Drive Conversion */}
-      <SimplifiedCTA onSectionView={() => handleSectionView('cta')} />
+      <div id="testimonials">
+        <SimplifiedCTA onSectionView={() => handleSectionView('cta')} />
+      </div>
       
       {/* Footer */}
       <Footer />

@@ -41,6 +41,13 @@ const HeroSection = ({ onSectionView }) => {
     
     return () => clearTimeout(timer);
   }, [onSectionView]);
+
+  // Listen for global Start Free Trial trigger from header
+  useEffect(() => {
+    const handler = () => setIsDrawerOpen(true);
+    window.addEventListener('openTrial', handler);
+    return () => window.removeEventListener('openTrial', handler);
+  }, []);
   
   // Handle video load for smooth experience
   const handleVideoLoad = () => {
@@ -67,7 +74,7 @@ const HeroSection = ({ onSectionView }) => {
   };
   
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
