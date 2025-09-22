@@ -3,7 +3,7 @@
  * Shows Navigator logo, key section links, and CTAs (Start Free Trial, Login).
  */
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import LoginDrawer from './LoginDrawer';
 
 const Header = () => {
@@ -35,8 +35,8 @@ const Header = () => {
         <div className="h-16 flex items-center justify-between">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2" onClick={(e) => { e.preventDefault(); document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }); }}>
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600"></div>
-            <span className="text-xl font-extrabold text-white">Navigator</span>
+            <img src="/Navigator Logo-04.png" alt="Navigator" className="h-8 w-auto" />
+            <span className="sr-only">Navigator</span>
           </a>
 
           {/* Nav links */}
@@ -50,7 +50,7 @@ const Header = () => {
           {/* CTAs */}
           <div className="flex items-center gap-3">
             <button onClick={() => setIsLoginOpen(true)} className="px-4 py-2 rounded-lg border border-white/40 text-white hover:bg-white/10">Login</button>
-            <button onClick={handleStartTrial} className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90">Start Free Trial</button>
+            <button onClick={handleStartTrial} className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#1800FF] to-[#008FFF] text-white font-semibold hover:opacity-90">Start Free Trial</button>
           </div>
         </div>
       </div>

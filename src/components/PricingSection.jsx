@@ -175,7 +175,7 @@ const PricingSection = ({ onSectionView }) => {
         }`}>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
             Flexible Pricing for
-            <span className="block text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
+            <span className="block text-transparent bg-gradient-to-r from-[#1800FF] to-[#008FFF] bg-clip-text">
               Every Hotel
             </span>
           </h2>
@@ -296,7 +296,7 @@ const PricingSection = ({ onSectionView }) => {
                   <button className={`w-full py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
                     tier.popular
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105 shadow-lg'
-                      : 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:scale-105 shadow-lg'
+                      : 'bg-gradient-to-r from-[#1800FF] to-[#008FFF] text-white hover:scale-105 shadow-lg'
                   }`}>
                     {tier.cta}
                   </button>
@@ -323,7 +323,7 @@ const PricingSection = ({ onSectionView }) => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:scale-105 transition-all duration-300">
+                  <button className="px-8 py-4 bg-gradient-to-r from-[#1800FF] to-[#008FFF] rounded-lg font-semibold hover:scale-105 transition-all duration-300">
                     Schedule API Demo
                   </button>
                   <button className="px-8 py-4 border-2 border-white/30 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">

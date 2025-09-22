@@ -300,7 +300,7 @@ const LeadGenerationDrawer = ({ isOpen, onClose }) => {
         }`}
       >
         {/* Drawer Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+        <div className="bg-gradient-to-r from-[#1800FF] to-[#008FFF] text-white p-6">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-2xl font-bold mb-2">
@@ -558,7 +558,7 @@ const LeadGenerationDrawer = ({ isOpen, onClose }) => {
               className={`w-full py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
                 isSubmitting
                   ? 'bg-slate-400 cursor-not-allowed text-white'
-                  : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg hover:scale-105'
+                  : 'bg-gradient-to-r from-[#1800FF] to-[#008FFF] text-white hover:shadow-lg hover:scale-105'
               }`}
             >
               {isSubmitting ? (
@@ -624,7 +624,7 @@ const LeadGenerationDrawer = ({ isOpen, onClose }) => {
 
               <button
                 onClick={handleConfirmRecommendations}
-                className="w-full py-3 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-95"
+                className="w-full py-3 rounded-lg font-semibold bg-gradient-to-r from-[#1800FF] to-[#008FFF] text-white hover:opacity-95"
               >
                 Confirm & Continue
               </button>

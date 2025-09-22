@@ -21,8 +21,10 @@ const DifferentiatorMatrix = () => {
     <section className="relative py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            What Makes <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Navigator</span> Different?
+          <h2 className="text-4xl md:text-5xl font-bold flex items-center justify-center gap-3">
+            <span>What Makes</span>
+            <img src="/Navigator Logo-02.png" alt="Navigator" className="h-10 md:h-12 w-auto align-middle" />
+            <span>Different?</span>
           </h2>
           <p className="mt-3 text-slate-600">A clear decision table—so you can see the operational reality, not marketing gloss.</p>
         </div>
@@ -31,7 +33,11 @@ const DifferentiatorMatrix = () => {
           {/* Header */}
           <div className="grid grid-cols-12">
             <div className="col-span-4 px-6 py-5 font-semibold text-slate-700 bg-slate-50">Comparison</div>
-            <div className="col-span-4 px-6 py-5 text-center font-bold bg-gradient-to-r from-blue-700 to-indigo-700 text-white">Navigator</div>
+            <div className="col-span-4 px-6 py-5 text-center font-bold bg-gradient-to-r from-blue-700 to-indigo-700 text-white">
+              <span className="inline-flex items-center justify-center">
+                <img src="/Navigator Logo-04.png" alt="Navigator" className="h-7 md:h-8 w-auto brightness-110" />
+              </span>
+            </div>
             <div className="col-span-4 px-6 py-5 text-center font-semibold text-slate-700 bg-slate-50">Other Solutions</div>
           </div>
 

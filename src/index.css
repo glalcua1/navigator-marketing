@@ -221,7 +221,7 @@ body {
 /* Button Enhancements */
 .btn-navigator {
   @apply px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300;
-  @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white;
+  @apply bg-gradient-to-r from-[#1800FF] to-[#008FFF] text-white;
   @apply hover:scale-105 hover:shadow-2xl;
   @apply focus:outline-none focus:ring-4 focus:ring-blue-300;
 }
@@ -242,7 +242,7 @@ body {
 
 /* Text Gradient Effects */
 .text-gradient-blue-purple {
-  @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-[#1800FF] to-[#008FFF] bg-clip-text text-transparent;
 }
 
 .text-gradient-green {

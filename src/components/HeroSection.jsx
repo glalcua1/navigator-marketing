@@ -107,7 +107,7 @@ const HeroSection = ({ onSectionView }) => {
             }`}>
               <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-[1.1] text-white">
                 Revenue Intelligence
-                <span className="block text-transparent bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text">
+                <span className="block text-transparent bg-gradient-to-r from-[#1800FF] to-[#008FFF] bg-clip-text">
                   That Works While You Sleep
                 </span>
               </h1>
@@ -127,7 +127,7 @@ const HeroSection = ({ onSectionView }) => {
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <button 
                   onClick={handleStartTrial}
-                  className="group relative rounded-2xl p-[2px] bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 hover:opacity-95"
+                  className="group relative rounded-2xl p-[2px] bg-gradient-to-r from-[#1800FF] to-[#008FFF] transition-all duration-300 hover:opacity-95"
                 >
                   <span className="block px-10 py-5 rounded-[14px] text-white font-bold text-xl bg-transparent">
                     <span>Start Free Trial</span>
@@ -177,19 +177,63 @@ const HeroSection = ({ onSectionView }) => {
 
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start">
-                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center rounded-lg bg-green-500/30 border border-green-400/40 text-green-200 text-sm font-bold">✓</span>
+                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center">
+                    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="icoGrad1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                          <stop offset="0" stopColor="#1800FF" />
+                          <stop offset="1" stopColor="#008FFF" />
+                        </linearGradient>
+                      </defs>
+                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad1)" strokeWidth="2.5" fill="none" />
+                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad1)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                  </span>
                   <span className="text-white">Most accurate rate shopping across 1100+ sources</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center rounded-lg bg-green-500/30 border border-green-400/40 text-green-200 text-sm font-bold">✓</span>
+                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center">
+                    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="icoGrad2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                          <stop offset="0" stopColor="#1800FF" />
+                          <stop offset="1" stopColor="#008FFF" />
+                        </linearGradient>
+                      </defs>
+                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad2)" strokeWidth="2.5" fill="none" />
+                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad2)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                  </span>
                   <span className="text-white">Real-time parity breach detection & resolution</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center rounded-lg bg-green-500/30 border border-green-400/40 text-green-200 text-sm font-bold">✓</span>
+                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center">
+                    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="icoGrad3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                          <stop offset="0" stopColor="#1800FF" />
+                          <stop offset="1" stopColor="#008FFF" />
+                        </linearGradient>
+                      </defs>
+                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad3)" strokeWidth="2.5" fill="none" />
+                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad3)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                  </span>
                   <span className="text-white">Early signals on demand shifts & market trends</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center rounded-lg bg-green-500/30 border border-green-400/40 text-green-200 text-sm font-bold">✓</span>
+                  <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center">
+                    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="icoGrad4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                          <stop offset="0" stopColor="#1800FF" />
+                          <stop offset="1" stopColor="#008FFF" />
+                        </linearGradient>
+                      </defs>
+                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad4)" strokeWidth="2.5" fill="none" />
+                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad4)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                  </span>
                   <span className="text-white">Flexible APIs for smooth integration</span>
                 </li>
               </ul>

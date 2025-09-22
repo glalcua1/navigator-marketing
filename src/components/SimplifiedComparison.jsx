@@ -102,7 +102,7 @@ const SegmentedSolutions = ({ isVisible, onStartTrial }) => {
             onClick={() => setActiveTab(key)}
             className={`px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex-1 min-w-0 ${
               activeTab === key
-                ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105'
+                ? 'bg-gradient-to-r from-[#1800FF] to-[#008FFF] text-white shadow-lg transform scale-105'
                 : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50'
             }`}
           >
@@ -168,7 +168,7 @@ const SegmentedSolutions = ({ isVisible, onStartTrial }) => {
                         console.log(`[SegmentedSolutions] ${segment.cta} clicked for ${segment.title}`);
                         onStartTrial();
                       }}
-                      className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+                      className="px-8 py-4 bg-gradient-to-r from-[#1800FF] to-[#008FFF] text-white rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
                     >
                       {segment.cta}
                     </button>

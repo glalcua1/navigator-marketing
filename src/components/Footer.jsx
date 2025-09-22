@@ -15,7 +15,7 @@
  * @version 1.0.0
  */
 
-import React from 'react';
+ 
 
 /**
  * Footer Component
@@ -46,11 +46,9 @@ const Footer = () => {
         <div className="py-12">
           {/* Navigator Logo and Tagline */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-3">
-              <span className="text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
-                Navigator
-              </span>
-            </h2>
+            <div className="mb-3 flex justify-center">
+              <img src="/Navigator Logo-04.png" alt="Navigator" className="h-10 md:h-12 w-auto" />
+            </div>
             <p className="text-lg text-slate-300">
               Revenue Intelligence That Works While You Sleep
             </p>

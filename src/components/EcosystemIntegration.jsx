@@ -26,7 +26,7 @@ const EcosystemIntegration = () => {
           {/* Left text aligned with tree */}
           <div>
             <h2 className="text-4xl md:text-5xl font-extrabold text-white">
-              Built to Plug <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-300">into Your Ecosystem</span>
+              Built to Plug <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1800FF] to-[#008FFF]">into Your Ecosystem</span>
             </h2>
             <p className="mt-4 text-blue-100 text-lg max-w-xl">
               Whether you need a full UI experience or raw rate feeds into your BI stack, Navigator adapts to your workflows.

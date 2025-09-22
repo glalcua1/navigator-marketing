@@ -164,7 +164,7 @@ const ProblemSolutionSection = ({ onSectionView }) => {
             {/* Section Header */}
             <div className="mb-10 lg:hidden">
               <div className="text-slate-600 font-semibold tracking-wide uppercase mb-1">How navigator works:</div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              <h3 className="text-3xl md:text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#1800FF] to-[#008FFF]">
                 From Market Signals to Better Pricing Decisions
               </h3>
               <p className="text-slate-600 mt-2 max-w-4xl">
@@ -178,7 +178,7 @@ const ProblemSolutionSection = ({ onSectionView }) => {
               <div className="lg:sticky lg:top-24 self-start">
                 <div className="hidden lg:block mb-6">
                   <div className="text-slate-600 font-semibold tracking-wide uppercase mb-1">How navigator works:</div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">From Market Signals to Better Pricing Decisions</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#1800FF] to-[#008FFF]">From Market Signals to Better Pricing Decisions</h3>
                   <p className="text-slate-600 mt-2">To solve this, Navigator does the heavy lifting across four layers:</p>
                 </div>
                 <div className="relative rounded-3xl overflow-hidden bg-slate-900/5 border border-slate-200">
