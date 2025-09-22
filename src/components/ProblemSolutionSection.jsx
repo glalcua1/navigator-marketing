@@ -39,14 +39,24 @@ const ProblemSolutionSection = ({ onSectionView }) => {
           console.log('[ProblemSolutionSection] Core message section visible');
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1, rootMargin: '0px 0px -20% 0px' }
     );
     
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
     
-    return () => observer.disconnect();
+    // Fallback for iOS Safari oddities: reveal after slight delay on mobile
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    let fallbackTimer;
+    if (isMobile) {
+      fallbackTimer = setTimeout(() => setIsVisible(true), 900);
+    }
+    
+    return () => {
+      observer.disconnect();
+      if (fallbackTimer) clearTimeout(fallbackTimer);
+    };
   }, [onSectionView]);
   
   return (
