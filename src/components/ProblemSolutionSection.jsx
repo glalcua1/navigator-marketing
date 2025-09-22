@@ -194,7 +194,7 @@ const ProblemSolutionSection = ({ onSectionView }) => {
                   <p className="text-slate-600 mt-2">To solve this, Navigator does the heavy lifting across four layers:</p>
                 </div>
                 <div className="relative rounded-3xl overflow-hidden bg-slate-900/5 border border-slate-200">
-                  <img src="/11706.jpg" alt="Navigator market signals" className="w-full h-[420px] md:h-[520px] object-cover" />
+                  <img src="/11706.jpg" alt="Navigator market signals" className="w-full h-72 sm:h-80 md:h-[480px] lg:h-[520px] object-cover" />
                   <div className="absolute inset-x-0 bottom-0 p-4">
                     <div className="backdrop-blur-md bg-white/20 border border-white/30 text-white rounded-2xl px-4 py-3 text-sm md:text-base flex items-start">
                       <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>

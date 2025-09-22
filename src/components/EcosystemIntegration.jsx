@@ -11,7 +11,7 @@
 const EcosystemIntegration = () => {
   return (
     <section
-      className="relative py-20 min-h-[680px] md:min-h-[760px]"
+      className="relative py-16 sm:py-20 min-h-[560px] sm:min-h-[640px] md:min-h-[760px]"
       style={{
         backgroundImage: "url('/209165475_12afdcf0-ee57-4cd4-bc17-67c5c457e3ac.jpg')",
         backgroundRepeat: 'no-repeat',
@@ -22,7 +22,7 @@ const EcosystemIntegration = () => {
       {/* overlay for legibility on left (lightened to show more image) */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <div className="min-h-[680px] md:min-h-[760px] flex items-center">
+        <div className="min-h-[560px] sm:min-h-[640px] md:min-h-[760px] flex items-center">
           <div className="grid md:grid-cols-2 gap-10 items-center w-full">
           {/* Left text aligned with tree */}
           <div>
