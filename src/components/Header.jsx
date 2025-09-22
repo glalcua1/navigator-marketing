@@ -3,9 +3,12 @@
  * Shows Navigator logo, key section links, and CTAs (Start Free Trial, Login).
  */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import LoginDrawer from './LoginDrawer';
 
 const Header = () => {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
   const handleStartTrial = (e) => {
     e.preventDefault();
     try {
@@ -15,6 +18,16 @@ const Header = () => {
     const hero = document.getElementById('hero');
     hero?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+
+  // open login drawer on hash change #login (optional quick access)
+  useEffect(() => {
+    const onHash = () => {
+      if (window.location.hash === '#login') setIsLoginOpen(true);
+    };
+    window.addEventListener('hashchange', onHash);
+    onHash();
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-slate-900/85 backdrop-blur border-b border-slate-800">
@@ -36,11 +49,12 @@ const Header = () => {
 
           {/* CTAs */}
           <div className="flex items-center gap-3">
-            <a href="https://navigator-263010608613.us-east4.run.app" className="px-4 py-2 rounded-lg border border-white/40 text-white hover:bg-white/10">Login</a>
+            <button onClick={() => setIsLoginOpen(true)} className="px-4 py-2 rounded-lg border border-white/40 text-white hover:bg-white/10">Login</button>
             <button onClick={handleStartTrial} className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90">Start Free Trial</button>
           </div>
         </div>
       </div>
+      <LoginDrawer isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </header>
   );
 };
