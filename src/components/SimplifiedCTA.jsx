@@ -68,7 +68,7 @@ const SimplifiedCTA = ({ onSectionView }) => {
         }}
       >
         {/* Enhanced overlay for better glass effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-900/40 to-indigo-900/50 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1800FF]/30 via-[#1800FF]/20 to-[#008FFF]/30 backdrop-blur-sm"></div>
         
         <div className="relative z-10">
           <div className="text-center mb-12">

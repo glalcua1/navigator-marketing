@@ -161,11 +161,12 @@ const HeroSection = ({ onSectionView }) => {
           <div className={`transition-all duration-1000 delay-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            <div className="relative rounded-3xl p-[1px] bg-gradient-to-r from-blue-300/40 to-purple-300/40">
-              <div className="bg-black/50 backdrop-blur-xl rounded-3xl p-8 border border-white/20">
-                <div className="flex items-center justify-between mb-4">
+            <div className="relative rounded-3xl p-[2px] bg-gradient-to-r from-[#1800FF]/60 to-[#008FFF]/60">
+              <div className="relative bg-blue-950/60 backdrop-blur-xl rounded-3xl p-8 border border-white/10 overflow-hidden">
+                <div className="absolute inset-0 bg-black/30 pointer-events-none"></div>
+                <div className="relative z-10">
+                <div className="flex items-center mb-4">
                   <h3 className="text-2xl font-bold text-white">Why hotels choose Navigator</h3>
-                  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-white/15 border border-white/20 text-white/90">Navigator USP</span>
                 </div>
 
               {/* Removed duplicate highlighted statement per request */}
@@ -240,12 +241,12 @@ const HeroSection = ({ onSectionView }) => {
 
               {/* Pill badge with glass effect highlighting the key positioning statement */}
               <div className="mt-6 flex justify-center">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm md:text-base font-semibold shadow-lg shadow-black/20">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400"></span>
+                <span className="inline-flex items-center gap-2 pl-6 pr-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm md:text-base font-semibold shadow-lg shadow-black/20">
                   Beyond Light, uncover every competitor insight for maximum revenue gain.
                 </span>
               </div>
 
+                </div>
               </div>
             </div>
           </div>

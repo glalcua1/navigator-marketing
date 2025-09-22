@@ -99,13 +99,15 @@ const ProblemSolutionSection = ({ onSectionView }) => {
               </div>
 
               {/* Feature Cards */}
-              <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
+              <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+                <div className="group relative rounded-2xl h-full">
+                  <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-r from-[#1800FF] to-[#008FFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="relative z-10 bg-white rounded-2xl p-0 border border-slate-200 transition-all duration-300 overflow-hidden h-full transform group-hover:-translate-y-1 group-hover:shadow-xl">
                   {/* Illustration: Rate Tracking (image) */}
                   <div className="relative z-10 w-full h-32 sm:h-36 md:h-40 lg:h-44 overflow-hidden">
                     <img src="/19456.jpg" alt="Rate tracking visualization" className="w-full h-full object-cover" />
                   </div>
-                  <div className="relative z-10 p-6">
+                  <div className="relative z-10 p-6 flex flex-col h-[calc(100%-theme(spacing[32]))]">
                   <h4 className="text-xl font-bold text-slate-800 mb-3">Rate Tracking</h4>
                   <p className="text-slate-600 leading-relaxed">
                     Detects rate discrepancies and parity violations automatically—even the subtle ones—across hundreds of OTAs and POS combinations.
@@ -113,45 +115,55 @@ const ProblemSolutionSection = ({ onSectionView }) => {
                   </div>
                   {/* Hover gradient overlay */}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/40 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                 </div>
-                <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
+                <div className="group relative rounded-2xl h-full">
+                  <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-r from-[#1800FF] to-[#008FFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="relative z-10 bg-white rounded-2xl p-0 border border-slate-200 transition-all duration-300 overflow-hidden h-full transform group-hover:-translate-y-1 group-hover:shadow-xl">
                   {/* Illustration: Predictive Demand Signals (svg image) */}
                   <div className="relative z-10 w-full h-32 sm:h-36 md:h-40 lg:h-44 overflow-hidden">
                     <img src="/420946224_fb6c1e98-bc72-4bb3-8f68-384948186b85.svg" alt="Predictive Demand Signals" className="w-full h-full object-cover" />
                   </div>
-                  <div className="relative z-10 p-6">
+                  <div className="relative z-10 p-6 flex flex-col h-[calc(100%-theme(spacing[32]))]">
                   <h4 className="text-xl font-bold text-slate-800 mb-3">Predictive Demand Signals</h4>
                   <p className="text-slate-600 leading-relaxed">
                     Uses AI to surface spikes and dips in demand before they happen, so you can adjust rates proactively.
                   </p>
                   </div>
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/40 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                 </div>
-                <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
+                <div className="group relative rounded-2xl h-full">
+                  <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-r from-[#1800FF] to-[#008FFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="relative z-10 bg-white rounded-2xl p-0 border border-slate-200 transition-all duration-300 overflow-hidden h-full transform group-hover:-translate-y-1 group-hover:shadow-xl">
                   {/* Illustration: Smarter Filtering (image) */}
                   <div className="relative z-10 w-full h-32 sm:h-36 md:h-40 lg:h-44 overflow-hidden">
                     <img src="/1570.jpg" alt="Smarter filtering" className="w-full h-full object-cover" />
                   </div>
-                  <div className="relative z-10 p-6">
+                  <div className="relative z-10 p-6 flex flex-col h-[calc(100%-theme(spacing[32]))]">
                   <h4 className="text-xl font-bold text-slate-800 mb-3">Smarter Filtering, Less Noise</h4>
                   <p className="text-slate-600 leading-relaxed">
                     Cuts through the clutter by flagging only the violations and shifts that actually matter to your market segment.
                   </p>
                   </div>
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/40 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                 </div>
-                <div className="group relative bg-white rounded-2xl p-0 border border-slate-200 hover:border-blue-200 transition-all duration-300 overflow-hidden">
+                <div className="group relative rounded-2xl h-full">
+                  <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-r from-[#1800FF] to-[#008FFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="relative z-10 bg-white rounded-2xl p-0 border border-slate-200 transition-all duration-300 overflow-hidden h-full transform group-hover:-translate-y-1 group-hover:shadow-xl">
                   {/* Illustration: AI-Powered Recommendations (image) */}
                   <div className="relative z-10 w-full h-32 sm:h-36 md:h-40 lg:h-44 overflow-hidden">
                     <img src="/6841.jpg" alt="AI-powered recommendations" className="w-full h-full object-cover" />
                   </div>
-                  <div className="relative z-10 p-6">
+                  <div className="relative z-10 p-6 flex flex-col h-[calc(100%-theme(spacing[32]))]">
                   <h4 className="text-xl font-bold text-slate-800 mb-3">AI-Powered Recommendations</h4>
                   <p className="text-slate-600 leading-relaxed">
                     From price positioning to parity resolution paths, Navigator guides your next move with data-backed intelligence.
                   </p>
                   </div>
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/40 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                 </div>
               </div>
               </div>
