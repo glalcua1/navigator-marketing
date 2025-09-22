@@ -28,6 +28,19 @@ import LeadGenerationDrawer from './LeadGenerationDrawer';
  */
 const SegmentedSolutions = ({ isVisible, onStartTrial }) => {
   const [activeTab, setActiveTab] = useState('enterprise');
+  const [previousTab, setPreviousTab] = useState('enterprise');
+
+  // Tab order for directional animation (left/right)
+  const tabOrder = ['enterprise', 'independent', 'management'];
+
+  /**
+   * Handles tab changes while tracking previous tab to determine
+   * animation direction (slides in from left or right).
+   */
+  const handleTabChange = (nextTab) => {
+    setPreviousTab(activeTab);
+    setActiveTab(nextTab);
+  };
 
   const segments = {
     enterprise: {
@@ -99,7 +112,7 @@ const SegmentedSolutions = ({ isVisible, onStartTrial }) => {
         {Object.entries(segments).map(([key, segment]) => (
           <button
             key={key}
-            onClick={() => setActiveTab(key)}
+            onClick={() => handleTabChange(key)}
             className={`px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex-1 min-w-0 ${
               activeTab === key
                 ? 'bg-gradient-to-r from-[#1800FF] to-[#008FFF] text-white shadow-lg transform scale-105'
@@ -126,7 +139,11 @@ const SegmentedSolutions = ({ isVisible, onStartTrial }) => {
             }`}
           >
             {activeTab === key && (
-              <div className="p-8 md:p-12">
+              <div className={`p-8 md:p-12 ${
+                tabOrder.indexOf(activeTab) > tabOrder.indexOf(previousTab)
+                  ? 'animate-fadeInRight'
+                  : 'animate-fadeInLeft'
+              }`}>
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                   
                   {/* Left Content */}
