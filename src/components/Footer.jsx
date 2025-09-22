@@ -38,7 +38,8 @@ const Footer = () => {
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-1/4 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 right-1/4 w-40 h-40 bg-purple-500/10 rounded-full blur-xl"></div>
+        {/* Removed purple accent; use brand blue only */}
+        <div className="absolute bottom-10 right-1/4 w-40 h-40 bg-blue-500/10 rounded-full blur-xl"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -76,17 +77,17 @@ const Footer = () => {
                   </a>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-purple-300 mb-2">API Integration</h4>
+                  <h4 className="font-semibold text-blue-300 mb-2">API Integration</h4>
                   <p className="text-slate-300 mb-3">Enterprise & hotel chains</p>
                   <a
                     href="mailto:developers@navigator.com"
-                    className="text-white hover:text-purple-300 transition-colors duration-300 block"
+                    className="text-white hover:text-blue-300 transition-colors duration-300 block"
                   >
                     developers@navigator.com
                   </a>
                   <a
                     href="tel:+1-555-123-4568"
-                    className="text-white hover:text-purple-300 transition-colors duration-300"
+                    className="text-white hover:text-blue-300 transition-colors duration-300"
                   >
                     +1 (555) 123-4568
                   </a>
