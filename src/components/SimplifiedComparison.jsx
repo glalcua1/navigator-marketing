@@ -182,26 +182,21 @@ const SegmentedSolutions = ({ isVisible, onStartTrial }) => {
                     <div className="space-y-4">
                       {segment.features.map((feature, index) => (
                         <div key={index} className="flex items-start">
-                          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                            <div className="w-3 h-2 border-l-2 border-b-2 border-white transform rotate-45"></div>
-                          </div>
+                          <span className="mt-1 mr-3 inline-flex h-6 w-6 items-center justify-center flex-shrink-0">
+                            <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                              <defs>
+                                <linearGradient id="segTickGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                  <stop offset="0" stopColor="#1800FF" />
+                                  <stop offset="1" stopColor="#008FFF" />
+                                </linearGradient>
+                              </defs>
+                              <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#segTickGrad)" strokeWidth="1.6" fill="none" />
+                              <path d="M6 12l4 4 8-8" stroke="url(#segTickGrad)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                            </svg>
+                          </span>
                           <span className="text-slate-700 leading-relaxed">{feature}</span>
                         </div>
                       ))}
-                    </div>
-
-                    {/* Trust Signal */}
-                    <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl border border-blue-200">
-                      <div className="flex items-center mb-3">
-                        <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
-                          <span className="text-white text-sm">✓</span>
-                        </div>
-                        <span className="font-semibold text-slate-800">Trusted by 500+ hotels worldwide</span>
-                      </div>
-                      <p className="text-slate-600 text-sm">
-                        Join leading hotels who've chosen Navigator for reliable, 
-                        intelligent revenue management that works from day one.
-                      </p>
                     </div>
                   </div>
                 </div>
