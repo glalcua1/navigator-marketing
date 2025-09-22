@@ -157,10 +157,10 @@ const HeroSection = ({ onSectionView }) => {
             </div>
           </div>
           
-          {/* Right Side - Clean Stats */}
+          {/* Right Side - Clean Stats (narrower, right-aligned) */}
           <div className={`transition-all duration-1000 delay-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          } w-full max-w-md mx-auto lg:mx-0 lg:justify-self-end lg:ml-auto`}>
             <div className="relative rounded-3xl p-[2px] bg-gradient-to-r from-[#1800FF]/60 to-[#008FFF]/60">
               <div className="relative bg-blue-950/60 backdrop-blur-xl rounded-3xl p-8 border border-white/10 overflow-hidden">
                 <div className="absolute inset-0 bg-black/30 pointer-events-none"></div>
@@ -186,8 +186,8 @@ const HeroSection = ({ onSectionView }) => {
                           <stop offset="1" stopColor="#008FFF" />
                         </linearGradient>
                       </defs>
-                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad1)" strokeWidth="2.5" fill="none" />
-                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad1)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad1)" strokeWidth="1.6" fill="none" />
+                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad1)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
                   </span>
                   <span className="text-white">Most accurate rate shopping across 1100+ sources</span>
@@ -201,8 +201,8 @@ const HeroSection = ({ onSectionView }) => {
                           <stop offset="1" stopColor="#008FFF" />
                         </linearGradient>
                       </defs>
-                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad2)" strokeWidth="2.5" fill="none" />
-                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad2)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad2)" strokeWidth="1.6" fill="none" />
+                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad2)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
                   </span>
                   <span className="text-white">Real-time parity breach detection & resolution</span>
@@ -216,8 +216,8 @@ const HeroSection = ({ onSectionView }) => {
                           <stop offset="1" stopColor="#008FFF" />
                         </linearGradient>
                       </defs>
-                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad3)" strokeWidth="2.5" fill="none" />
-                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad3)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad3)" strokeWidth="1.6" fill="none" />
+                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad3)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
                   </span>
                   <span className="text-white">Early signals on demand shifts & market trends</span>
@@ -231,8 +231,8 @@ const HeroSection = ({ onSectionView }) => {
                           <stop offset="1" stopColor="#008FFF" />
                         </linearGradient>
                       </defs>
-                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad4)" strokeWidth="2.5" fill="none" />
-                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad4)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                      <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="6" stroke="url(#icoGrad4)" strokeWidth="1.6" fill="none" />
+                      <path d="M6 12l4 4 8-8" stroke="url(#icoGrad4)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
                   </span>
                   <span className="text-white">Flexible APIs for smooth integration</span>
