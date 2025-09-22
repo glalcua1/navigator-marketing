@@ -47,8 +47,8 @@ const Header = () => {
             <a href="#testimonials" onClick={(e) => { e.preventDefault(); document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-white">Testimonials</a>
           </nav>
 
-          {/* CTAs */}
-          <div className="flex items-center gap-3">
+          {/* CTAs (hidden on mobile) */}
+          <div className="hidden sm:flex items-center gap-3">
             <button onClick={() => setIsLoginOpen(true)} className="px-4 py-2 rounded-lg border border-white/40 text-white hover:bg-white/10">Login</button>
             <button onClick={handleStartTrial} className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#1800FF] to-[#008FFF] text-white font-semibold hover:opacity-90">Start Free Trial</button>
           </div>

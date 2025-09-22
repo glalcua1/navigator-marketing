@@ -84,7 +84,7 @@ const MarketingPage = () => {
       )}
       
       {/* Hero Section - The Hook */}
-      <div id="hero">
+      <div>
         <HeroSection onSectionView={() => handleSectionView('hero')} />
       </div>
       

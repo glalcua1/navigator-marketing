@@ -52,7 +52,7 @@ const ProblemSolutionSection = ({ onSectionView }) => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-20 bg-white"
+      className="relative py-16 md:py-20 bg-white"
     >
       <div className="max-w-6xl mx-auto px-6">
         
