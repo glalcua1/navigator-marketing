@@ -140,7 +140,7 @@ const HeroSection = ({ onSectionView }) => {
                 </button>
               </div>
               
-              <div className="mt-6 flex items-center text-slate-300 text-sm">
+              <div className="mt-6 hidden md:flex items-center text-slate-300 text-sm">
                 <div className="flex items-center mr-6">
                   <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
                   No credit card required
