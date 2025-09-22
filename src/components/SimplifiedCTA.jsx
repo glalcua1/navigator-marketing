@@ -53,29 +53,20 @@ const SimplifiedCTA = ({ onSectionView }) => {
       ref={sectionRef}
       className="relative"
     >
+      {/* Separator above section */}
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="h-px bg-gradient-to-r from-[#1800FF] via-[#008FFF] to-[#1800FF] opacity-50 rounded-full mb-8"></div>
+      </div>
       {/* Full Width Testimonials Section */}
       <div 
-        className="relative w-full py-16 overflow-hidden min-h-[600px]"
-        style={{
-          backgroundImage: 'url(/gradient-backgrounds-modern-design-trend-adding-depth-vibrancy-digital-spaces.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-        onError={(e) => {
-          console.log('[SimplifiedCTA] Background image failed to load, using fallback');
-          e.target.style.backgroundImage = 'linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #be185d 100%)';
-        }}
+        className="relative w-full py-16 overflow-hidden min-h-[600px] bg-white"
       >
-        {/* Enhanced overlay for better glass effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1800FF]/30 via-[#1800FF]/20 to-[#008FFF]/30 backdrop-blur-sm"></div>
-        
         <div className="relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
               Trusted by Leading Hotels Worldwide
             </h2>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Over 500 hotels have transformed their revenue management with Navigator
             </p>
           </div>
@@ -85,7 +76,7 @@ const SimplifiedCTA = ({ onSectionView }) => {
             <div className="overflow-hidden">
               <div className="flex gap-8 animate-scroll-infinite">
                 {/* Testimonial 1 */}
-                <div className="flex-none w-96 bg-white/15 backdrop-blur-xl rounded-2xl p-8 border border-white/30 shadow-2xl">
+                <div className="flex-none w-96 bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
                   <div className="flex items-center mb-6">
                     <img 
                       src="/portrait-woman-playing-poker-casino.jpg" 
@@ -94,185 +85,185 @@ const SimplifiedCTA = ({ onSectionView }) => {
                       onError={(e) => e.target.style.display = 'none'}
                     />
                     <div>
-                      <div className="font-bold text-white text-lg">Sarah Chen</div>
-                      <div className="text-blue-200">Revenue Manager</div>
-                      <div className="text-blue-300 text-sm">Dubai Luxury Hotels</div>
+                      <div className="font-bold text-slate-900 text-lg">Sarah Chen</div>
+                      <div className="text-slate-500">Revenue Manager</div>
+                      <div className="text-slate-400 text-sm">Dubai Luxury Hotels</div>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6 text-base">
+                  <p className="text-slate-600 leading-relaxed mb-6 text-base">
                     "Navigator increased our ADR by 23% in just 3 months. I finally sleep through the night knowing our revenue is protected by intelligent automation."
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-yellow-400">
-                      ★★★★★ <span className="ml-2 text-blue-200 text-sm">5-star rating</span>
+                      ★★★★★ <span className="ml-2 text-slate-500 text-sm">5-star rating</span>
                     </div>
-                    <div className="text-green-400 font-semibold">+23% ADR</div>
+                    <div className="text-emerald-600 font-semibold">+23% ADR</div>
                   </div>
                 </div>
                 
                 {/* Testimonial 2 */}
-                <div className="flex-none w-96 bg-white/15 backdrop-blur-xl rounded-2xl p-8 border border-white/30 shadow-2xl">
+                <div className="flex-none w-96 bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#1800FF] to-[#008FFF] flex items-center justify-center text-white font-bold text-xl mr-4">
                       MR
                     </div>
                     <div>
-                      <div className="font-bold text-white text-lg">Michael Rodriguez</div>
-                      <div className="text-blue-200">Director of Revenue</div>
-                      <div className="text-blue-300 text-sm">Atlantic Resort Group</div>
+                      <div className="font-bold text-slate-900 text-lg">Michael Rodriguez</div>
+                      <div className="text-slate-500">Director of Revenue</div>
+                      <div className="text-slate-400 text-sm">Atlantic Resort Group</div>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6 text-base">
+                  <p className="text-slate-600 leading-relaxed mb-6 text-base">
                     "Implementation took 2 weeks vs 6 months with our previous platform. Our RevPAR is up 31% and we're spending 90% less time on analysis."
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-yellow-400">
-                      ★★★★★ <span className="ml-2 text-blue-200 text-sm">5-star rating</span>
+                      ★★★★★ <span className="ml-2 text-slate-500 text-sm">5-star rating</span>
                     </div>
-                    <div className="text-green-400 font-semibold">+31% RevPAR</div>
+                    <div className="text-emerald-600 font-semibold">+31% RevPAR</div>
                   </div>
                 </div>
                 
                 {/* Testimonial 3 */}
-                <div className="flex-none w-96 bg-white/15 backdrop-blur-xl rounded-2xl p-8 border border-white/30 shadow-2xl">
+                <div className="flex-none w-96 bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-indigo-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#1800FF] to-[#008FFF] flex items-center justify-center text-white font-bold text-xl mr-4">
                       AF
                     </div>
                     <div>
-                      <div className="font-bold text-white text-lg">Amanda Foster</div>
-                      <div className="text-blue-200">VP Revenue Management</div>
-                      <div className="text-blue-300 text-sm">Heritage Hotel Collection</div>
+                      <div className="font-bold text-slate-900 text-lg">Amanda Foster</div>
+                      <div className="text-slate-500">VP Revenue Management</div>
+                      <div className="text-slate-400 text-sm">Heritage Hotel Collection</div>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6 text-base">
+                  <p className="text-slate-600 leading-relaxed mb-6 text-base">
                     "Navigator's predictive analytics helped us capture a 45% revenue boost during festival season. The forecast accuracy is consistently 94%+."
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-yellow-400">
-                      ★★★★★ <span className="ml-2 text-blue-200 text-sm">5-star rating</span>
+                      ★★★★★ <span className="ml-2 text-slate-500 text-sm">5-star rating</span>
                     </div>
-                    <div className="text-green-400 font-semibold">+45% Revenue</div>
+                    <div className="text-emerald-600 font-semibold">+45% Revenue</div>
                   </div>
                 </div>
                 
                 {/* Testimonial 4 */}
-                <div className="flex-none w-96 bg-white/15 backdrop-blur-xl rounded-2xl p-8 border border-white/30 shadow-2xl">
+                <div className="flex-none w-96 bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#1800FF] to-[#008FFF] flex items-center justify-center text-white font-bold text-xl mr-4">
                       JS
                     </div>
                     <div>
-                      <div className="font-bold text-white text-lg">James Sullivan</div>
-                      <div className="text-blue-200">General Manager</div>
-                      <div className="text-blue-300 text-sm">Alpine Mountain Resort</div>
+                      <div className="font-bold text-slate-900 text-lg">James Sullivan</div>
+                      <div className="text-slate-500">General Manager</div>
+                      <div className="text-slate-400 text-sm">Alpine Mountain Resort</div>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6 text-base">
+                  <p className="text-slate-600 leading-relaxed mb-6 text-base">
                     "Navigator automatically adjusted our rates during peak ski season, capturing 38% more revenue than last year. Set it and forget it revenue optimization."
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-yellow-400">
-                      ★★★★★ <span className="ml-2 text-blue-200 text-sm">5-star rating</span>
+                      ★★★★★ <span className="ml-2 text-slate-500 text-sm">5-star rating</span>
                     </div>
-                    <div className="text-green-400 font-semibold">+38% Season Revenue</div>
+                    <div className="text-emerald-600 font-semibold">+38% Season Revenue</div>
                   </div>
                 </div>
                 
                 {/* Testimonial 5 */}
-                <div className="flex-none w-96 bg-white/15 backdrop-blur-xl rounded-2xl p-8 border border-white/30 shadow-2xl">
+                <div className="flex-none w-96 bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-rose-500 to-orange-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#1800FF] to-[#008FFF] flex items-center justify-center text-white font-bold text-xl mr-4">
                       LK
                     </div>
                     <div>
-                      <div className="font-bold text-white text-lg">Lisa Kim</div>
-                      <div className="text-blue-200">Revenue Director</div>
-                      <div className="text-blue-300 text-sm">Metropolitan Suites Chain</div>
+                      <div className="font-bold text-slate-900 text-lg">Lisa Kim</div>
+                      <div className="text-slate-500">Revenue Director</div>
+                      <div className="text-slate-400 text-sm">Metropolitan Suites Chain</div>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6 text-base">
+                  <p className="text-slate-600 leading-relaxed mb-6 text-base">
                     "Managing 15 properties was overwhelming until Navigator. Now I monitor all locations from one dashboard and our portfolio revenue is up 29%."
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-yellow-400">
-                      ★★★★★ <span className="ml-2 text-blue-200 text-sm">5-star rating</span>
+                      ★★★★★ <span className="ml-2 text-slate-500 text-sm">5-star rating</span>
                     </div>
-                    <div className="text-green-400 font-semibold">+29% Portfolio</div>
+                    <div className="text-emerald-600 font-semibold">+29% Portfolio</div>
                   </div>
                 </div>
                 
                 {/* Testimonial 6 */}
-                <div className="flex-none w-96 bg-white/15 backdrop-blur-xl rounded-2xl p-8 border border-white/30 shadow-2xl">
+                <div className="flex-none w-96 bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#1800FF] to-[#008FFF] flex items-center justify-center text-white font-bold text-xl mr-4">
                       DP
                     </div>
                     <div>
-                      <div className="font-bold text-white text-lg">David Park</div>
-                      <div className="text-blue-200">Owner-Operator</div>
-                      <div className="text-blue-300 text-sm">Coastal Boutique Inn</div>
+                      <div className="font-bold text-slate-900 text-lg">David Park</div>
+                      <div className="text-slate-500">Owner-Operator</div>
+                      <div className="text-slate-400 text-sm">Coastal Boutique Inn</div>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6 text-base">
+                  <p className="text-slate-600 leading-relaxed mb-6 text-base">
                     "As an independent hotel owner, Navigator gives me enterprise-level intelligence without the complexity. Revenue is up 26% and I saved $50K in consulting fees."
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-yellow-400">
-                      ★★★★★ <span className="ml-2 text-blue-200 text-sm">5-star rating</span>
+                      ★★★★★ <span className="ml-2 text-slate-500 text-sm">5-star rating</span>
                     </div>
-                    <div className="text-green-400 font-semibold">+26% Revenue</div>
+                    <div className="text-emerald-600 font-semibold">+26% Revenue</div>
                   </div>
                 </div>
                 
                 {/* Testimonial 7 */}
-                <div className="flex-none w-96 bg-white/15 backdrop-blur-xl rounded-2xl p-8 border border-white/30 shadow-2xl">
+                <div className="flex-none w-96 bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-violet-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#1800FF] to-[#008FFF] flex items-center justify-center text-white font-bold text-xl mr-4">
                       RT
                     </div>
                     <div>
-                      <div className="font-bold text-white text-lg">Rachel Torres</div>
-                      <div className="text-blue-200">Regional Revenue Manager</div>
-                      <div className="text-blue-300 text-sm">Global Hospitality Group</div>
+                      <div className="font-bold text-slate-900 text-lg">Rachel Torres</div>
+                      <div className="text-slate-500">Regional Revenue Manager</div>
+                      <div className="text-slate-400 text-sm">Global Hospitality Group</div>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6 text-base">
+                  <p className="text-slate-600 leading-relaxed mb-6 text-base">
                     "Navigator's API integration with our PMS was seamless. 200 properties connected in 3 weeks, and we're seeing 35% better rate optimization across the portfolio."
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-yellow-400">
-                      ★★★★★ <span className="ml-2 text-blue-200 text-sm">5-star rating</span>
+                      ★★★★★ <span className="ml-2 text-slate-500 text-sm">5-star rating</span>
                     </div>
-                    <div className="text-green-400 font-semibold">+35% Rate Optimization</div>
+                    <div className="text-emerald-600 font-semibold">+35% Rate Optimization</div>
                   </div>
                 </div>
                 
                 {/* Testimonial 8 */}
-                <div className="flex-none w-96 bg-white/15 backdrop-blur-xl rounded-2xl p-8 border border-white/30 shadow-2xl">
+                <div className="flex-none w-96 bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#1800FF] to-[#008FFF] flex items-center justify-center text-white font-bold text-xl mr-4">
                       TM
                     </div>
                     <div>
-                      <div className="font-bold text-white text-lg">Thomas Mitchell</div>
-                      <div className="text-blue-200">Revenue Consultant</div>
-                      <div className="text-blue-300 text-sm">Hospitality Revenue Partners</div>
+                      <div className="font-bold text-slate-900 text-lg">Thomas Mitchell</div>
+                      <div className="text-slate-500">Revenue Consultant</div>
+                      <div className="text-slate-400 text-sm">Hospitality Revenue Partners</div>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6 text-base">
+                  <p className="text-slate-600 leading-relaxed mb-6 text-base">
                     "Navigator transformed how I serve my clients. White-label reporting saves me 20 hours per week, and my clients love the real-time insights dashboard."
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-yellow-400">
-                      ★★★★★ <span className="ml-2 text-blue-200 text-sm">5-star rating</span>
+                      ★★★★★ <span className="ml-2 text-slate-500 text-sm">5-star rating</span>
                     </div>
-                    <div className="text-green-400 font-semibold">20hrs/week saved</div>
+                    <div className="text-emerald-600 font-semibold">20hrs/week saved</div>
                   </div>
                 </div>
 
                 {/* Duplicate testimonials for seamless loop */}
-                <div className="flex-none w-96 bg-white/15 backdrop-blur-xl rounded-2xl p-8 border border-white/30 shadow-2xl">
+                <div className="flex-none w-96 bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
                   <div className="flex items-center mb-6">
                     <img 
                       src="/portrait-woman-playing-poker-casino.jpg" 
@@ -281,41 +272,41 @@ const SimplifiedCTA = ({ onSectionView }) => {
                       onError={(e) => e.target.style.display = 'none'}
                     />
                     <div>
-                      <div className="font-bold text-white text-lg">Sarah Chen</div>
-                      <div className="text-blue-200">Revenue Manager</div>
-                      <div className="text-blue-300 text-sm">Dubai Luxury Hotels</div>
+                      <div className="font-bold text-slate-900 text-lg">Sarah Chen</div>
+                      <div className="text-slate-500">Revenue Manager</div>
+                      <div className="text-slate-400 text-sm">Dubai Luxury Hotels</div>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6 text-base">
+                  <p className="text-slate-600 leading-relaxed mb-6 text-base">
                     "Navigator increased our ADR by 23% in just 3 months. I finally sleep through the night knowing our revenue is protected by intelligent automation."
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-yellow-400">
-                      ★★★★★ <span className="ml-2 text-blue-200 text-sm">5-star rating</span>
+                      ★★★★★ <span className="ml-2 text-slate-500 text-sm">5-star rating</span>
                     </div>
-                    <div className="text-green-400 font-semibold">+23% ADR</div>
+                    <div className="text-emerald-600 font-semibold">+23% ADR</div>
                   </div>
                 </div>
                 
-                <div className="flex-none w-96 bg-white/15 backdrop-blur-xl rounded-2xl p-8 border border-white/30 shadow-2xl">
+                <div className="flex-none w-96 bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#1800FF] to-[#008FFF] flex items-center justify-center text-white font-bold text-xl mr-4">
                       MR
                     </div>
                     <div>
-                      <div className="font-bold text-white text-lg">Michael Rodriguez</div>
-                      <div className="text-blue-200">Director of Revenue</div>
-                      <div className="text-blue-300 text-sm">Atlantic Resort Group</div>
+                      <div className="font-bold text-slate-900 text-lg">Michael Rodriguez</div>
+                      <div className="text-slate-500">Director of Revenue</div>
+                      <div className="text-slate-400 text-sm">Atlantic Resort Group</div>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6 text-base">
+                  <p className="text-slate-600 leading-relaxed mb-6 text-base">
                     "Implementation took 2 weeks vs 6 months with our previous platform. Our RevPAR is up 31% and we're spending 90% less time on analysis."
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-yellow-400">
-                      ★★★★★ <span className="ml-2 text-blue-200 text-sm">5-star rating</span>
+                      ★★★★★ <span className="ml-2 text-slate-500 text-sm">5-star rating</span>
                     </div>
-                    <div className="text-green-400 font-semibold">+31% RevPAR</div>
+                    <div className="text-emerald-600 font-semibold">+31% RevPAR</div>
                   </div>
                 </div>
               </div>
@@ -324,14 +315,14 @@ const SimplifiedCTA = ({ onSectionView }) => {
           
           {/* Hotel Brand Trust Indicators */}
           <div className="text-center mt-12">
-            <p className="text-blue-200 text-lg mb-6">Trusted by 500+ hotels including:</p>
-            <div className="flex flex-wrap justify-center items-center gap-6 opacity-80">
-              <div className="text-white font-semibold px-6 py-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30">Dubai Luxury Hotels</div>
-              <div className="text-white font-semibold px-6 py-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30">Atlantic Resort Group</div>
-              <div className="text-white font-semibold px-6 py-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30">Heritage Collection</div>
-              <div className="text-white font-semibold px-6 py-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30">Metropolitan Suites</div>
-              <div className="text-white font-semibold px-6 py-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30">Alpine Mountain Resort</div>
-              <div className="text-white font-semibold px-6 py-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30">Coastal Boutique Inn</div>
+            <p className="text-slate-600 text-lg mb-6">Trusted by 500+ hotels including:</p>
+            <div className="flex flex-wrap justify-center items-center gap-6">
+              <div className="text-slate-700 font-semibold px-6 py-3 bg-white rounded-xl border border-slate-200">Dubai Luxury Hotels</div>
+              <div className="text-slate-700 font-semibold px-6 py-3 bg-white rounded-xl border border-slate-200">Atlantic Resort Group</div>
+              <div className="text-slate-700 font-semibold px-6 py-3 bg-white rounded-xl border border-slate-200">Heritage Collection</div>
+              <div className="text-slate-700 font-semibold px-6 py-3 bg-white rounded-xl border border-slate-200">Metropolitan Suites</div>
+              <div className="text-slate-700 font-semibold px-6 py-3 bg-white rounded-xl border border-slate-200">Alpine Mountain Resort</div>
+              <div className="text-slate-700 font-semibold px-6 py-3 bg-white rounded-xl border border-slate-200">Coastal Boutique Inn</div>
             </div>
           </div>
         </div>
