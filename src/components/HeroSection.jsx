@@ -17,6 +17,7 @@
 
 import React, { useState, useEffect } from 'react';
 import LeadGenerationDrawer from './LeadGenerationDrawer';
+import BookDemoDrawer from './BookDemoDrawer';
 
 /**
  * Hero Section Component
@@ -30,6 +31,7 @@ const HeroSection = ({ onSectionView }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isBookDemoOpen, setIsBookDemoOpen] = useState(false);
   
   // Animation trigger on component mount
   useEffect(() => {
@@ -65,6 +67,12 @@ const HeroSection = ({ onSectionView }) => {
   const handleStartTrial = () => {
     setIsDrawerOpen(true);
     console.log('[HeroSection] Opening lead generation drawer');
+  };
+
+  // Handle opening the book demo drawer
+  const handleBookDemo = () => {
+    setIsBookDemoOpen(true);
+    console.log('[HeroSection] Opening book demo drawer');
   };
 
   // Handle closing the lead generation drawer
@@ -135,7 +143,10 @@ const HeroSection = ({ onSectionView }) => {
                   </span>
                 </button>
                 
-                <button className="px-8 py-5 border-2 border-white/80 text-white rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-white/10">
+                <button
+                  onClick={handleBookDemo}
+                  className="px-8 py-5 border-2 border-white/80 text-white rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-white/10"
+                >
                   Book a Demo
                 </button>
               </div>
@@ -265,6 +276,15 @@ const HeroSection = ({ onSectionView }) => {
       <LeadGenerationDrawer 
         isOpen={isDrawerOpen} 
         onClose={handleCloseDrawer} 
+      />
+      
+      {/* Book Demo Drawer */}
+      <BookDemoDrawer
+        isOpen={isBookDemoOpen}
+        onClose={() => {
+          setIsBookDemoOpen(false);
+          console.log('[HeroSection] Closing book demo drawer');
+        }}
       />
     </section>
   );
